@@ -9,6 +9,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <title>Realtors</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -183,11 +188,12 @@
 
     <div class="testimonial__content">
       <img src="./images/quote.svg" alt="">
-      <blockquote>
-        Discovering my dream home was effortless with this real estate platform. The user-friendly interface and
-        transparent
-        process made it a stress-free experience. I highly recommend it for anyone on the house-hunting journey!
-        <footer>Sarah Thompson</footer>
+      <blockquote class="review">
+        <span>Discovering my dream home was effortless with this real estate platform. The user-friendly interface and
+          transparent
+          process made it a stress-free experience. I highly recommend it for anyone on the house-hunting
+          journey!</span>
+        <footer class="author">Sarah Thompson</footer>
       </blockquote>
       <div class="stars">
         <img src="./images/star.svg" alt="">
@@ -198,11 +204,11 @@
       </div>
 
       <div class="testimonials__control">
-        <button type="button" aria-label="previous testimonial">
+        <button type="button" aria-label="previous testimonial" id="previous-testimonial">
           &lt;
         </button>
 
-        <button type="button" aria-label="next testimonial">
+        <button type="button" aria-label="next testimonial" id="next-testimonial">
           &gt;
         </button>
       </div>
@@ -212,13 +218,13 @@
 
   <!-- ===========    FAQ SECTION   ========== -->
 
-  <section class="faq" id="faqs">
+  <section class="faq page" id="faqs">
     <h2>frequently asked questions</h2>
-    <p>If there are question you want to ask. We will answer all your question.</p>
+    <p class="first">If there are questions you want to ask. We will answer all your questions.</p>
 
     <ul class="faq__list">
 
-      <li class="faq__card">
+      <li class="faq__card" data-state="open">
         <h5>How do i search for properties on your website</h5>
         <p>To find your dream property, use our intuitive search bar on the homepage. You can filter by location, price
           range,
@@ -227,46 +233,45 @@
         <button type="button" class="faq__btn">-</button>
       </li>
 
-      <li class="faq__card">
+      <li class="faq__card" data-state="closed">
         <h5>Can I save my favourite listings for future reference</h5>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempore, labore excepturi non voluptas
           sapiente!</p>
 
-        <button type="button" class="faq__btn">-</button>
+        <button type="button" class="faq__btn">+</button>
       </li>
 
-      <li class="faq__card">
+      <li class="faq__card" data-state="closed">
         <h5>What information is provided in property listings</h5>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam officiis laborum ut! Placeat, qui modi?
         </p>
 
-        <button type="button" class="faq__btn">-</button>
+        <button type="button" class="faq__btn">+</button>
       </li>
 
-      <li class="faq__card">
+      <li class="faq__card" data-state="closed">
         <h5>How can I schedule a property viewing?</h5>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi magni repudiandae deserunt illum minima
           nesciunt!</p>
 
-        <button type="button" class="faq__btn">-</button>
+        <button type="button" class="faq__btn">+</button>
       </li>
 
-      <li class="faq__card">
+      <li class="faq__card" data-state="closed">
         <h5>Do you offer property maagement services</h5>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis aliquid aspernatur ex cupiditate ea sint!
         </p>
 
-        <button type="button" class="faq__btn">-</button>
+        <button type="button" class="faq__btn">+</button>
       </li>
     </ul>
-
   </section>
 
 
   <footer class="main__footer">
 
     <div class="section__one">
-      <div>
+      <div class="left__side">
         <h6>Realtors</h6>
 
         <p>Discover your ideal home effortlessly with our intuitive real estate platform. Explore detailed property
@@ -290,16 +295,32 @@
 
 
       <div class="quick__links">
-        <a href="#">Property Listings</a>
-        <a href="#">Financing Options</a>
-        <a href="#">Schedule a Viewing</a>
-        <a href="#">Sell your Property</a>
+
+        <h5>quick links</h5>
+
+        <ul>
+          <li><a href="#">Property Listings</a></li>
+          <li><a href="#">Financing Options</a></li>
+          <li><a href="#">Schedule a Viewing</a></li>
+          <li><a href="#">Sell your Property</a></li>
+        </ul>
       </div>
 
       <div class="customer__support">
-        <a href="#faqs">FAQs</a>
-        <a href="#">Contact Us</a>
-        <a href="#testimonials">Customer Testimonials</a>
+        <h5>customer support</h5>
+        <ul>
+          <li>
+            <a href="#faqs">FAQs</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+
+          <li>
+            <a href="#testimonials">Customer Testimonials</a>
+
+          </li>
+        </ul>
       </div>
     </div>
 
