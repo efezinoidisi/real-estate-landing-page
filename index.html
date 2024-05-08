@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <title>Realtors</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header class="main__header">
+    <nav class="main__nav">
+      <h1><a href="#">Realtors</a></h1>
+
+      <button type="button" class="nav-toggle" aria-controls="nav__menu" aria-label="toggle menu" aria-expanded="false">
+        <svg fill="var(--foreground)" class="hamburger" viewBox="0 0 100 100" width="100">
+          <rect class="line top" width="80" height="10" x="10" y="25" rx="5">
+          </rect>
+          <rect class="line middle" width="80" height="10" x="10" y="45" rx="5">
+          </rect>
+          <rect class="line bottom" width="80" height="10" x="10" y="65" rx="5">
+          </rect>
+        </svg>
+      </button>
+      <ul class="hide" id="nav__menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">sign in</a></li>
+      </ul>
+
+      <div class="sign-in-wrap">
+        <a href="#">Sign In</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- HERO SECTION -->
+
+  <article class="hero">
+    <div class="hero__content flex__content">
+      <h2>unlock your ideal living space</h2>
+      <p>Browse Diverse Real Estate Options Tailored to Your Lifestyle.Discover a myriad of real estate opportunities
+        thoughtfully curated to suit your unique lifestyle and preferences.</p>
+
+      <a href="#">Get Started</a>
+      <a href="#">Learn more <span>&rarr;</span></a>
+    </div>
+    <div class="hero__image flex__img">
+      <img src="./images/hero.webp" alt="" />
+    </div>
+
+  </article>
+
+  <!-- LOGO SECTION -->
+  <div class="scroller">
+    <ul class="logos scroller__inner">
+      <li><img src="./images/logo1.webp" alt="" class="test"></li>
+      <li><img src="./images/logo2.webp" alt=""></li>
+      <li><img src="./images/logo3.webp" alt=""></li>
+      <li><img src="./images/logo4.webp" alt=""></li>
+      <li><img src="./images/logo5.webp" alt=""></li>
+
+    </ul>
+  </div>
+
+  <section class="flex discover page">
+    <div class="flex__img">
+      <img src="./images/s2.webp" alt="" />
+    </div>
+
+    <div class="flex__content">
+      <h2>uncover our real estate journey</h2>
+      <p>Embark on a narrative shaped by unwavering commitment and innovation, where trust is the cornerstone. Our
+        legacy
+        transcends transactions, weaving a tale of community impact and enduring relationships.</p>
+      <div class="discover__units">
+        <div class="count__wrap">
+          <p class="count">+<span data-value="100">100</span></p>
+          <p>Units ready</p>
+        </div>
+
+        <div class="count__wrap">
+          <p class="count">+<span data-value="80">80</span>k</p>
+          <p>Customers</p>
+        </div>
+        <div class="count__wrap">
+          <p class="count">+<span data-value="90">90</span>k</p>
+          <p>Units ready</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why__us page">
+    <h2>why choose us</h2>
+
+    <ul class="why__us-list">
+      <li class="why__us-card">
+        <img src="./images/e.svg" alt="" class="why__us-icon" />
+        <h4 class="why__us-heading">expertise</h4>
+        <p class="why__us-text">Our seasoned professionals bring years of industry knowledge.</p>
+      </li>
+
+      <li class="why__us-card">
+        <img src="./images/ps.svg" alt="" class="why__us-icon">
+        <h4 class="why__us-heading">personalized service</h4>
+        <p class="why__us-text">Experience tailored solutions with our commitment.</p>
+      </li>
+
+      <li class="why__us-card">
+        <img src="./images/en.svg" alt="" class="why__us-icon">
+        <h4 class="why__us-heading">extensive network</h4>
+        <p class="why__us-text">Benefit from our vast network of buyers, sellers, and industry connections.</p>
+      </li>
+
+      <li class="why__us-card">
+        <img src="./images/t.svg" alt="" class="why__us-icon">
+        <h4 class="why__us-heading">technology</h4>
+        <p class="why__us-text">Stay ahead with cutting-edge tools and digital marketing expertise.</p>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- ============================= DISCOVER ================= -->
+
+  <section class="discover-home page">
+    <header class="discover__header">
+      <h2>Discover your Ideal Home</h2>
+      <a href="#">See all
+        <img src="./images/arrow.svg" alt="">
+      </a>
+    </header>
+
+    <div class="discover__list">
+      <div class="discover__card">
+        <img src="images/s3-1.webp" alt="">
+        <h5>Serene Suburbia in Maplewood, USA</h5>
+        <div class="discover__card-bottom">
+          <button type="button">Book now</button>
+          <p>$5,000,000</p>
+        </div>
+      </div>
+
+      <div class="discover__card">
+        <img src="images/s3-2.webp" alt="">
+        <h5>Urban Oasis in Melbourne, Australia</h5>
+        <div class="discover__card-bottom">
+          <button type="button">Book now</button>
+          <p>$8,000,000</p>
+        </div>
+      </div>
+
+      <div class="discover__card">
+        <img src="images/s3-3.webp" alt="">
+        <h5>Coastal Retreat in Cape Town, South Africa</h5>
+        <div class="discover__card-bottom">
+          <button type="button">Book now</button>
+          <p>$7,000,000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============  TESTIMONIALS SECTION  ============= -->
+
+  <section class="testimonials page" id="testimonials">
+
+    <div class="testimonial__img">
+      <img src="./images/tes-1.webp" alt="">
+    </div>
+
+    <div class="testimonial__content">
+      <img src="./images/quote.svg" alt="">
+      <blockquote>
+        Discovering my dream home was effortless with this real estate platform. The user-friendly interface and
+        transparent
+        process made it a stress-free experience. I highly recommend it for anyone on the house-hunting journey!
+        <footer>Sarah Thompson</footer>
+      </blockquote>
+      <div class="stars">
+        <img src="./images/star.svg" alt="">
+        <img src="./images/star.svg" alt="">
+        <img src="./images/star.svg" alt="">
+        <img src="./images/star.svg" alt="">
+        <img src="./images/star.svg" alt="">
+      </div>
+
+      <div class="testimonials__control">
+        <button type="button" aria-label="previous testimonial">
+          &lt;
+        </button>
+
+        <button type="button" aria-label="next testimonial">
+          &gt;
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===========    FAQ SECTION   ========== -->
+
+  <section class="faq" id="faqs">
+    <h2>frequently asked questions</h2>
+    <p>If there are question you want to ask. We will answer all your question.</p>
+
+    <ul class="faq__list">
+
+      <li class="faq__card">
+        <h5>How do i search for properties on your website</h5>
+        <p>To find your dream property, use our intuitive search bar on the homepage. You can filter by location, price
+          range,
+          property type, and more.</p>
+
+        <button type="button" class="faq__btn">-</button>
+      </li>
+
+      <li class="faq__card">
+        <h5>Can I save my favourite listings for future reference</h5>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempore, labore excepturi non voluptas
+          sapiente!</p>
+
+        <button type="button" class="faq__btn">-</button>
+      </li>
+
+      <li class="faq__card">
+        <h5>What information is provided in property listings</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam officiis laborum ut! Placeat, qui modi?
+        </p>
+
+        <button type="button" class="faq__btn">-</button>
+      </li>
+
+      <li class="faq__card">
+        <h5>How can I schedule a property viewing?</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi magni repudiandae deserunt illum minima
+          nesciunt!</p>
+
+        <button type="button" class="faq__btn">-</button>
+      </li>
+
+      <li class="faq__card">
+        <h5>Do you offer property maagement services</h5>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis aliquid aspernatur ex cupiditate ea sint!
+        </p>
+
+        <button type="button" class="faq__btn">-</button>
+      </li>
+    </ul>
+
+  </section>
+
+
+  <footer class="main__footer">
+
+    <div class="section__one">
+      <div>
+        <h6>Realtors</h6>
+
+        <p>Discover your ideal home effortlessly with our intuitive real estate platform. Explore detailed property
+          listings,
+          financing options, and easy scheduling. Stay informed with our newsletter and social media updates. Your dream
+          home
+          journey begins here.</p>
+
+        <div class="socials">
+          <a href="#" aria-label="twitter">
+            <img src="./images/twitter.svg" alt="">
+          </a>
+          <a href="#" aria-label="facebook">
+            <img src="./images/facebook.svg" alt="">
+          </a>
+          <a href="#" aria-label="instagram">
+            <img src="./images/insta.svg" alt="">
+          </a>
+        </div>
+      </div>
+
+
+      <div class="quick__links">
+        <a href="#">Property Listings</a>
+        <a href="#">Financing Options</a>
+        <a href="#">Schedule a Viewing</a>
+        <a href="#">Sell your Property</a>
+      </div>
+
+      <div class="customer__support">
+        <a href="#faqs">FAQs</a>
+        <a href="#">Contact Us</a>
+        <a href="#testimonials">Customer Testimonials</a>
+      </div>
+    </div>
+
+    <div class="section__two">
+      <p>&copy; 2024 Realtors All Rights Reserved.</p>
+      <p>
+        <a href="#">Privacy Policy</a>
+        |
+        <a href="#">Terms and Conditions</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
+    integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
