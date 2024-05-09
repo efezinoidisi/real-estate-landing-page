@@ -23,6 +23,7 @@
 
     <h1><a href="#">Realtors</a></h1>
 
+    <span class="scroll-watcher" aria-hidden="true"></span>
     <button type="button" class="nav-toggle" aria-controls="nav__menu" aria-label="toggle menu" aria-expanded="false">
       <svg fill="var(--color)" class="hamburger" viewBox="0 0 100 100" width="100">
         <rect class="line top" width="80" height="10" x="10" y="25" rx="5">
@@ -62,7 +63,7 @@
         <a href="#">Learn more <span>&rarr;</span></a>
       </div>
     </div>
-    <div class="hero__image flex__img ">
+    <div class="hero__image flex__img">
       <img src="./images/hero.webp" alt="" />
     </div>
 
@@ -83,7 +84,7 @@
   </div>
 
   <section class="flex discover page">
-    <div class="flex__img">
+    <div class="flex__img fade-in">
       <img src="./images/s2.webp" alt="" />
     </div>
 
@@ -206,31 +207,33 @@
       <img src="./images/tes-1.webp" alt="">
     </div>
 
-    <div class="testimonial__content">
-      <img src="./images/quote.svg" alt="">
-      <blockquote class="review">
-        <span>Discovering my dream home was effortless with this real estate platform. The user-friendly interface and
-          transparent
-          process made it a stress-free experience. I highly recommend it for anyone on the house-hunting
-          journey!</span>
-        <footer class="author">Sarah Thompson</footer>
-      </blockquote>
-      <div class="stars">
-        <img src="./images/star.svg" alt="">
-        <img src="./images/star.svg" alt="">
-        <img src="./images/star.svg" alt="">
-        <img src="./images/star.svg" alt="">
-        <img src="./images/star.svg" alt="">
-      </div>
+    <div class="outer">
+      <div class="testimonial__content">
+        <img src="./images/quote.svg" alt="">
+        <blockquote class="review">
+          <span>Discovering my dream home was effortless with this real estate platform. The user-friendly interface and
+            transparent
+            process made it a stress-free experience. I highly recommend it for anyone on the house-hunting
+            journey!</span>
+          <footer class="author">Sarah Thompson</footer>
+        </blockquote>
+        <div class="stars">
+          <img src="./images/star.svg" alt="">
+          <img src="./images/star.svg" alt="">
+          <img src="./images/star.svg" alt="">
+          <img src="./images/star.svg" alt="">
+          <img src="./images/star.svg" alt="">
+        </div>
 
-      <div class="testimonials__control">
-        <button type="button" aria-label="previous testimonial" id="previous-testimonial">
-          &lt;
-        </button>
+        <div class="testimonials__control">
+          <button type="button" aria-label="previous testimonial" id="previous-testimonial">
+            &lt;
+          </button>
 
-        <button type="button" aria-label="next testimonial" id="next-testimonial">
-          &gt;
-        </button>
+          <button type="button" aria-label="next testimonial" id="next-testimonial">
+            &gt;
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -246,41 +249,52 @@
 
       <li class="faq__card" data-state="open">
         <h5>How do i search for properties on your website</h5>
-        <p>To find your dream property, use our intuitive search bar on the homepage. You can filter by location, price
-          range,
-          property type, and more.</p>
+        <div class="answer">
+          <p>To find your dream property, use our intuitive search bar on the homepage. You can filter by location,
+            price
+            range,
+            property type, and more.</p>
+        </div>
 
         <button type="button" class="faq__btn">-</button>
       </li>
 
       <li class="faq__card" data-state="closed">
         <h5>Can I save my favourite listings for future reference</h5>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempore, labore excepturi non voluptas
-          sapiente!</p>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempore, labore excepturi non voluptas
+            sapiente!</p>
+        </div>
 
         <button type="button" class="faq__btn">+</button>
       </li>
 
       <li class="faq__card" data-state="closed">
         <h5>What information is provided in property listings</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam officiis laborum ut! Placeat, qui modi?
-        </p>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam officiis laborum ut! Placeat, qui modi?
+          </p>
 
+        </div>
         <button type="button" class="faq__btn">+</button>
       </li>
 
       <li class="faq__card" data-state="closed">
         <h5>How can I schedule a property viewing?</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi magni repudiandae deserunt illum minima
-          nesciunt!</p>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi magni repudiandae deserunt illum minima
+            nesciunt!</p>
+        </div>
 
         <button type="button" class="faq__btn">+</button>
       </li>
 
       <li class="faq__card" data-state="closed">
         <h5>Do you offer property management services</h5>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis aliquid aspernatur ex cupiditate ea sint!
-        </p>
+        <div class="answer">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis aliquid aspernatur ex cupiditate ea sint!
+          </p>
+        </div>
 
         <button type="button" class="faq__btn">+</button>
       </li>
@@ -288,7 +302,7 @@
   </section>
 
 
-  <footer class="main__footer">
+  <footer class="main__footer fade-in">
 
     <div class="section__one">
       <div class="left__side">
