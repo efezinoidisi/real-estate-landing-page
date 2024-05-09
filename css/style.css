@@ -524,6 +524,8 @@ h1 {
   border-radius: 1.1875rem;
   transition: 0.3s;
   overflow: hidden;
+  max-width: 40.625rem;
+  margin-inline: auto;
 
   h5,
   p {
@@ -690,6 +692,10 @@ h1 {
     }
   }
 
+  .scroller[data-animated="true"] {
+    mask: linear-gradient(90deg, transparent, white 15% 85%, transparent);
+  }
+
   .page {
     width: 85%;
   }
@@ -804,6 +810,10 @@ h1 {
 
   .page {
     width: 80%;
+  }
+
+  .scroller[data-animated="true"] {
+    mask: linear-gradient(90deg, transparent, white 20% 80%, transparent);
   }
 
   .discover__list {
