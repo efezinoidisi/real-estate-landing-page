@@ -20,44 +20,47 @@
 
 <body>
   <header class="main__header">
-    <nav class="main__nav">
-      <h1><a href="#">Realtors</a></h1>
 
-      <button type="button" class="nav-toggle" aria-controls="nav__menu" aria-label="toggle menu" aria-expanded="false">
-        <svg fill="var(--foreground)" class="hamburger" viewBox="0 0 100 100" width="100">
-          <rect class="line top" width="80" height="10" x="10" y="25" rx="5">
-          </rect>
-          <rect class="line middle" width="80" height="10" x="10" y="45" rx="5">
-          </rect>
-          <rect class="line bottom" width="80" height="10" x="10" y="65" rx="5">
-          </rect>
-        </svg>
-      </button>
-      <ul class="hide" id="nav__menu">
+    <h1><a href="#">Realtors</a></h1>
+
+    <button type="button" class="nav-toggle" aria-controls="nav__menu" aria-label="toggle menu" aria-expanded="false">
+      <svg fill="var(--color)" class="hamburger" viewBox="0 0 100 100" width="100">
+        <rect class="line top" width="80" height="10" x="10" y="25" rx="5">
+        </rect>
+        <rect class="line middle" width="80" height="10" x="10" y="45" rx="5">
+        </rect>
+        <rect class="line bottom" width="80" height="10" x="10" y="65" rx="5">
+        </rect>
+      </svg>
+    </button>
+    <nav class="main__nav">
+      <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Pricing</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#">sign in</a></li>
+        <li><a href="#">Sign In</a></li>
       </ul>
-
-      <div class="sign-in-wrap">
-        <a href="#">Sign In</a>
-      </div>
     </nav>
+
+    <div class="sign-in-wrap">
+      <a href="#">Sign In</a>
+    </div>
   </header>
 
 
   <!-- HERO SECTION -->
 
-  <article class="hero">
-    <div class="hero__content flex__content">
+  <article class="hero page flex">
+    <div class="hero__content ">
       <h2>unlock your ideal living space</h2>
       <p>Browse Diverse Real Estate Options Tailored to Your Lifestyle.Discover a myriad of real estate opportunities
         thoughtfully curated to suit your unique lifestyle and preferences.</p>
 
-      <a href="#">Get Started</a>
-      <a href="#">Learn more <span>&rarr;</span></a>
+      <div class="more">
+        <a href="#">Get Started</a>
+        <a href="#">Learn more <span>&rarr;</span></a>
+      </div>
     </div>
     <div class="hero__image flex__img">
       <img src="./images/hero.webp" alt="" />
@@ -113,26 +116,34 @@
     <ul class="why__us-list">
       <li class="why__us-card">
         <img src="./images/e.svg" alt="" class="why__us-icon" />
-        <h4 class="why__us-heading">expertise</h4>
-        <p class="why__us-text">Our seasoned professionals bring years of industry knowledge.</p>
+        <div>
+          <h4 class="why__us-heading">expertise</h4>
+          <p class="why__us-text">Our seasoned professionals bring years of industry knowledge.</p>
+        </div>
       </li>
 
       <li class="why__us-card">
         <img src="./images/ps.svg" alt="" class="why__us-icon">
-        <h4 class="why__us-heading">personalized service</h4>
-        <p class="why__us-text">Experience tailored solutions with our commitment.</p>
+        <div>
+          <h4 class="why__us-heading">personalized service</h4>
+          <p class="why__us-text">Experience tailored solutions with our commitment.</p>
+        </div>
       </li>
 
       <li class="why__us-card">
         <img src="./images/en.svg" alt="" class="why__us-icon">
-        <h4 class="why__us-heading">extensive network</h4>
-        <p class="why__us-text">Benefit from our vast network of buyers, sellers, and industry connections.</p>
+        <div>
+          <h4 class="why__us-heading">extensive network</h4>
+          <p class="why__us-text">Benefit from our vast network of buyers, sellers, and industry connections.</p>
+        </div>
       </li>
 
       <li class="why__us-card">
         <img src="./images/t.svg" alt="" class="why__us-icon">
-        <h4 class="why__us-heading">technology</h4>
-        <p class="why__us-text">Stay ahead with cutting-edge tools and digital marketing expertise.</p>
+        <div>
+          <h4 class="why__us-heading">technology</h4>
+          <p class="why__us-text">Stay ahead with cutting-edge tools and digital marketing expertise.</p>
+        </div>
       </li>
 
     </ul>
@@ -143,14 +154,16 @@
   <section class="discover-home page">
     <header class="discover__header">
       <h2>Discover your Ideal Home</h2>
-      <a href="#">See all
-        <img src="./images/arrow.svg" alt="">
+      <a href="#" class="see-all">See all
+        <img src="./images/arrow.svg" alt="" width="10">
       </a>
     </header>
 
     <div class="discover__list">
       <div class="discover__card">
-        <img src="images/s3-1.webp" alt="">
+        <div class="image">
+          <img src="images/s3-1.webp" alt="">
+        </div>
         <h5>Serene Suburbia in Maplewood, USA</h5>
         <div class="discover__card-bottom">
           <button type="button">Book now</button>
@@ -159,7 +172,10 @@
       </div>
 
       <div class="discover__card">
-        <img src="images/s3-2.webp" alt="">
+
+        <div class="image">
+          <img src="images/s3-2.webp" alt="">
+        </div>
         <h5>Urban Oasis in Melbourne, Australia</h5>
         <div class="discover__card-bottom">
           <button type="button">Book now</button>
@@ -168,7 +184,9 @@
       </div>
 
       <div class="discover__card">
-        <img src="images/s3-3.webp" alt="">
+        <div class="image">
+          <img src="images/s3-3.webp" alt="">
+        </div>
         <h5>Coastal Retreat in Cape Town, South Africa</h5>
         <div class="discover__card-bottom">
           <button type="button">Book now</button>
@@ -258,7 +276,7 @@
       </li>
 
       <li class="faq__card" data-state="closed">
-        <h5>Do you offer property maagement services</h5>
+        <h5>Do you offer property management services</h5>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis aliquid aspernatur ex cupiditate ea sint!
         </p>
 
