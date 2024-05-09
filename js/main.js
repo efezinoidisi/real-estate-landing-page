@@ -1,4 +1,5 @@
 "use strict";
+
 const counterElements = document.querySelectorAll(".count span");
 
 const navButton = document.querySelector(".nav-toggle");
@@ -9,6 +10,7 @@ const testimonialsElement = document.querySelector(".testimonial__content");
 
 const faqs = document.querySelectorAll(".faq__card");
 
+// testimonial index
 let currentTestimonal = 0;
 
 const nextTestimonialBtn = document.querySelector("#next-testimonial");
@@ -41,6 +43,9 @@ const testimonials = [
 
 const sizeOfTestimonials = testimonials.length;
 
+/**
+ * control mobile navigation menu visibility
+ */
 function toggleMobileMenu() {
   const state = navButton.getAttribute("data-state");
 
@@ -54,7 +59,7 @@ function toggleMobileMenu() {
 }
 
 /**
- *
+ * callback function for intersection observer
  * @param {Array<IntersectionObserverEntry>} entries
  * @param {IntersectionObserver} observer
  */
@@ -71,7 +76,7 @@ function handleIntersection(entries, observer) {
 }
 
 /**
- *
+ *  slowly increment number value
  * @param {number} start
  * @param {number} end
  * @param {number} interval
@@ -85,11 +90,13 @@ function countUp(start = 0, end, interval = 4000, element) {
 
   const intervalId = setInterval(() => {
     // display count
-    if (count + gap >= end) {
-      count = end;
-    } else {
-      count += gap;
-    }
+    setTimeout(() => {
+      if (count + gap >= end) {
+        count = end;
+      } else {
+        count += gap;
+      }
+    }, 1000);
     element.textContent = count;
     if (count === end) {
       clearInterval(intervalId);
@@ -97,6 +104,9 @@ function countUp(start = 0, end, interval = 4000, element) {
   }, duration);
 }
 
+/**
+ *  logos infinite horizontal scroll animation
+ */
 function addAnimation() {
   scroller.setAttribute("data-animated", true);
 
@@ -111,17 +121,8 @@ function addAnimation() {
   });
 }
 
-function getNextTestimonial() {
-  if (currentTestimonal >= sizeOfTestimonialsv - 1) {
-    currentTestimonal = 0;
-  } else {
-    currentTestimonal++;
-  }
-  updateTestimonial();
-}
-
 /**
- *
+ *  change the testimonial being displayed to current index value
  * @param {number} index
  */
 function updateTestimonial() {
@@ -133,6 +134,8 @@ function updateTestimonial() {
 
   const ratings = testimonialsElement.querySelector(".stars");
 
+  testimonialsElement.classList.add("animated");
+
   quote.textContent = testimonial.review;
 
   author.textContent = testimonial.author;
@@ -143,6 +146,9 @@ function updateTestimonial() {
   ).join("");
 }
 
+/**
+ *  increment index of testimonial
+ */
 function getNextTestimonial() {
   if (currentTestimonal >= sizeOfTestimonials - 1) {
     currentTestimonal = 0;
@@ -152,6 +158,9 @@ function getNextTestimonial() {
   updateTestimonial();
 }
 
+/**
+ *  decrement index of testimonial
+ */
 function getPreviousTestimonial() {
   if (currentTestimonal === 0) {
     currentTestimonal = sizeOfTestimonials - 1;
@@ -188,6 +197,7 @@ function toggleFaqCard(element) {
   element.setAttribute("data-state", "open");
 }
 
+// intersection observer
 const observer = new IntersectionObserver(handleIntersection, {
   root: null,
   threshold: 0.3,
@@ -209,6 +219,7 @@ counterElements.forEach((element) => {
 
 navButton.addEventListener("click", toggleMobileMenu);
 
+// add scroller animation only when user doesn't mind animations
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   addAnimation();
 }
@@ -219,4 +230,8 @@ nextTestimonialBtn.addEventListener("click", getNextTestimonial);
 
 faqs.forEach((faq) => {
   faq.addEventListener("click", () => toggleFaqCard(faq));
+});
+
+testimonialsElement.addEventListener("animationend", function () {
+  this.classList.remove("animated");
 });
