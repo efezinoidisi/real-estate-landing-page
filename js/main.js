@@ -207,16 +207,6 @@ counterElements.forEach((element) => {
   observer.observe(element);
 });
 
-// anime({
-//   targets: "img.test",
-//   translateY: [
-//     {
-//       value: 200,
-//       duration: 500,
-//     },
-//   ],
-// });
-
 navButton.addEventListener("click", toggleMobileMenu);
 
 // add scroller animation only when user doesn't mind animations
