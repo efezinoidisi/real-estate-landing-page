@@ -263,7 +263,6 @@ h1 {
 
   .scroller__inner {
     --gap: 0.5rem;
-    --duration: 8s;
 
     flex-wrap: nowrap;
     animation: scroll var(--duration, 40s) linear infinite;
@@ -278,6 +277,8 @@ h1 {
 /* ******* UNCOVER OUR REAL ESTATE JOURNEY *************** */
 
 .discover {
+  margin-block: 4rem;
+
   p:has(~ .discover__units) {
     color: #6a6b6b;
   }
@@ -426,6 +427,7 @@ h1 {
   padding-block: 3rem;
   display: grid;
   gap: 2rem;
+  margin-block: 2rem;
 }
 
 .testimonial__img {
@@ -833,7 +835,7 @@ h1 {
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 1rem;
+    scroll-padding-top: 4rem;
   }
 
   .main__nav {

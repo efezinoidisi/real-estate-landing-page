@@ -10,6 +10,8 @@ const testimonialsElement = document.querySelector(".testimonial__content");
 
 const faqs = document.querySelectorAll(".faq__card");
 
+const navItems = document.querySelectorAll(".main__nav a");
+
 // testimonial index
 let currentTestimonal = 0;
 
@@ -170,6 +172,13 @@ function getPreviousTestimonial() {
   updateTestimonial();
 }
 
+function closeMobileMenuOnLinkClick() {
+  const state = navButton.getAttribute("data-state");
+  if (state !== "opened") return;
+
+  toggleMobileMenu();
+}
+
 /**
  *
  * @param {HTMLLIElement} element
@@ -224,4 +233,8 @@ faqs.forEach((faq) => {
 
 testimonialsElement.addEventListener("animationend", function () {
   this.classList.remove("animated");
+});
+
+navItems.forEach((nav) => {
+  nav.addEventListener("click", closeMobileMenuOnLinkClick);
 });
